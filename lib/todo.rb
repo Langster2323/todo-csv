@@ -43,12 +43,20 @@ class Todo
   end
 
   def add_todo
+    print "Name of Todo > "
+    @todos << [get_input, "no"]
+    #get the name of the todo from the user
+    # put that name into the list of @todos
   end
 
   def mark_todo
+    print "Which todo have you finished?"
+    row = get_input.to_i
+    @todos[row - 1][1] = "yes"
   end
 
   def todos
+    # puts "make this test pass,no\n"
     @todos
   end
 
